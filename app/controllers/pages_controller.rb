@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def home
   end
 
@@ -10,4 +11,8 @@ class PagesController < ApplicationController
 
   def styles
   end
+
+  def landing
+  end
+
 end
