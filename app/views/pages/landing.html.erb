@@ -1,7 +1,43 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <div class="container">
   <div class="main-header">
-    <h1>Stop not clicking on all of the popups that you encounter.
-      <br>Click more popups.
-    </h1>
+    <h1>Stop not clicking on all of the popups.</h1>
+    <!-- <h2 id="popup1">Click more popups.</h2> -->
+    <%= link_to "Click more popups", "#", class: "btn btn-warning", id: "popup1" %>
   </div>
 </div>
+
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Do you like modals?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    function showModal() {
+     $("#myModal").modal('show');
+    }
+    setTimeout(showModal, 3000)
+    // $("#popup1").click(function() {
+    //   $("#myModal").modal('show');
+    // });
+  });
+</script>
+
+
+
+<!-- http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ -->
