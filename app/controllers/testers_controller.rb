@@ -1,6 +1,8 @@
 class TestersController < ApplicationController
   before_action :set_tester, only: [:show, :edit, :update, :destroy]
 
+  # layout 'tester'
+
   # GET /testers
   # GET /testers.json
   def index

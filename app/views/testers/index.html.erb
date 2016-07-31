@@ -1,26 +1,182 @@
+<style type="text/css">
+body {
+  background-color: white !important;
+}
+
+.floater {
+  padding: 10px;
+}
+
+.clear {
+  clear: both;
+}
+
+.floater p {
+  color: green;
+  margin-top: 2px;
+  text-align: left;
+}
+
+#platos {
+  margin: 0;
+}
+
+.yellow {
+  background-color: yellow;
+  width: 80%;
+  display: inline block;
+  float: left;
+}
+
+.rojo {
+  background-color: red;
+  width: 20%;
+  display: inline block;
+  float: right;
+}
+
+.blue {
+  background-color: blue;
+  float: left;
+  width: 50%;
+}
+
+.pink {
+  background-color: pink;
+  float: right;
+  width: 50%;
+}
+
+.img-p-holder {
+  background-color: green;
+}
+
+.zindexer {
+  position: relative;
+}
+
+.zindexer p {
+  float: left;
+  margin-bottom: 20px;
+  width: 55%;
+  display: inline block;
+  text-align: left;
+  padding: 15px;
+}
+
+.imager {
+/*  width: 500;
+  height: 323;*/
+  width: 42%;
+  float: right;
+  margin-left: 2px;
+/*  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;*/
+}
+
+.testers {
+  position: relative;
+  margin-top: 20px;
+}
+
+.spacer {
+  height: 100px;
+  width: 100%;
+  background-color: orange;
+}
+
+.stacker img {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+#stacker1 {
+  position: relative;
+  border: 3px solid red;
+  z-index: 2;
+}
+
+#stacker2 {
+  position: relative;
+  left: -60px;
+  border: 3px solid green;
+}
+
+</style>
+
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Testers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @testers.each do |tester| %>
+<div class="floater clear">
+  <p>Tacos</p>
+  <div class="yellow">
+    <p>Hola</p>
+  </div>
+  <div class="rojo">
+    <p>Mundo</p>
+  </div>
+  <br class="clear">
+  <div class="blue">
+    <p>Azul</p>
+  </div>
+  <div class="pink">
+    <p>Pink</p>
+  </div>
+  <p id="platos">Platos</p>
+</div>
+
+<div class="img-p-holder clear">
+  <div class="zindexer">
+    <p>
+      Twee beard retro banjo shabby chic vice. Quinoa everyday carry pug, listicle banh mi flannel VHS brooklyn banjo austin. Chartreuse squid direct trade, iPhone messenger bag gentrify brunch stumptown kombucha twee single-origin coffee heirloom migas. Pickled selfies cornhole tousled, master cleanse synth 90's. Lomo humblebrag chia, chartreuse squid chillwave schlitz artisan cliche brunch chambray fixie plaid fashion axe PBR&B. Typewriter put a bird on it fixie, mumblecore you probably haven't heard of them beard wolf biodiesel church-key tilde asymmetrical retro pork belly hashtag lo-fi. Pickled cred chillwave, pitchfork waistcoat literally locavore everyday carry fixie.
+    <br></br>
+      Direct trade XOXO tilde skateboard, mixtape health goth pour-over. Literally fap humblebrag drinking vinegar sustainable cred. Affogato microdosing four loko, tousled tattooed brooklyn fanny pack tacos. Raw denim distillery direct trade, plaid drinking vinegar kickstarter vegan fingerstache poutine forage tote bag readymade. Swag tousled beard, poutine fashion axe keytar roof party. Celiac quinoa distillery, tumblr brooklyn lumbersexual fanny pack church-key salvia bespoke. Freegan fixie viral selfies.
+    </p>
+  </div>
+  <div class="imager">
+    <%= image_tag("internet.png") %>
+  </div>
+</div>
+
+
+<br class="clear"></br>
+
+<div class="spacer">
+</div>
+
+<div class="stacker">
+  <%= image_tag "internet.png", id: "stacker1" %>
+  <%= image_tag "internet.png", id: "stacker2" %>
+</div>
+
+<div class="testers">
+
+  <h1>Listing Testers</h1>
+  <table>
+    <thead>
       <tr>
-        <td><%= tester.name %></td>
-        <td><%= link_to 'Show', tester %></td>
-        <td><%= link_to 'Edit', edit_tester_path(tester) %></td>
-        <td><%= link_to 'Destroy', tester, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @testers.each do |tester| %>
+        <tr>
+          <td><%= tester.name %></td>
+          <td><%= link_to 'Show', tester %></td>
+          <td><%= link_to 'Edit', edit_tester_path(tester) %></td>
+          <td><%= link_to 'Destroy', tester, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
 
 <br>
 

@@ -17,6 +17,15 @@
       </div>
       <div class="modal-body">
         <p>Do you like modals?</p>
+        <%= form_tag("/", method: "get") do %>
+          <%= label_tag(:q, "Search for:") %>
+          <%= text_field_tag "email", class: "form-control" %>
+          <%= submit_tag("Search") %>
+        <% end %>
+        <form>
+          <label for="email-capture"></label>
+          <input type="text" id="email-capture" placeholder="Gimmie Ur Email">
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

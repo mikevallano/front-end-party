@@ -1,9 +1,16 @@
+$dark-blue: #2C3D51;
+$deep-red: #E74C3C;
+
 body {
   font-family: "Museo Sans","Lucida Grande", Arial, sans-serif;
   letter-spacing: -0.04em;
   text-align: center;
   // background-color: #2C3D51 !important;
   background-color: black !important;
+}
+
+label, input {
+  display: block;
 }
 
 .navbar-header {
@@ -17,7 +24,7 @@ body {
   background-color: #E74C3C !important;
   border-color: #E74C3C !important;
   font-size: 1.5em;
-  color: #2C3D51;
+  color: $dark-blue;
   margin-top: 25px;
 }
 
@@ -32,7 +39,7 @@ body {
     letter-spacing: -0.04em;
     text-align: center;
     // color: #2C3D51;
-    color: #E74C3C;
+    color: $deep-red;
     font-size: 34px;
     line-height: 48px;
     text-rendering: optimizelegibility;
@@ -41,8 +48,16 @@ body {
     font-family: "Museo Sans","Lucida Grande", Arial, sans-serif;
     letter-spacing: -0.04em;
     text-align: center;
-    color: #2C3D51;
+    color: $dark-blue;
   }
+}
+
+.modal {
+  margin-top: 10%;
+}
+
+.modal-content {
+  background-color: $dark-blue;
 }
 
 .main-header {
